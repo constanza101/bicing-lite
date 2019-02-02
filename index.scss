@@ -1,12 +1,5 @@
 $primary-color: #e3001b;
 
-table {
-  text-align: center;
-}
-
-.address {
-  text-align: left;
-}
 
 
 header{
@@ -17,10 +10,14 @@ header{
   background-color: $primary-color;
 }
 
+table {
+  text-align: center;
+}
 
 .rowCheck{
   padding-top: 20px;
   padding-bottom: 10px;
+  align: center;
 }
 
 a{
@@ -82,4 +79,10 @@ td label input[type="checkbox"] {
 
 .custom-checkbox input[type="checkbox"]:checked ~ .fas {
   opacity: 1;
+}
+
+.page-footer{
+  background-color: black;
+  color: white;
+  height: 20px;
 }
