@@ -27,11 +27,14 @@
 <div class="container">
   <div class="row rowCheck">
     <div class="col"></div>
-    <div class="col-8 ">
-      <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input " id="favourites" >
-        <label class="custom-control-label" for="favourites">Show my favourite stations</label>
-      </div>
+    <div class="col-8 favBtn">
+<!--	<div class="custom-control custom-checkbox">
+					<label class="custom-control-label" for="favourites">
+					<input type="checkbox" class="custom-control-input " id="favourites" >
+					Show favourites
+					</label>
+			</div>
+-->
     </div>
     <div class="col"></div>
   </div>
@@ -41,10 +44,10 @@
     <div class="col">
     </div>
 
-    <div class="col-8">
-      <button class="btn btn-outline-dark" onclick="getApiStations()" type="button" name="button">update</button>
+    <div class="col-8 col-sm-12">
+      <button class="btn btn-update btn-outline-dark" onclick="getApiStations()" type="button" name="button">update</button>
 <!--
-      <button class="btn btn-outline-dark" onclick="changeTheme()" type="button" name="button">dark theme</button>
+      <button class="btn btn-change-theme btn-outline-dark" onclick="changeTheme()" type="button" name="button">dark theme</button>
 -->
       <!-- Default indeterminate CHECKBOX BOOTSTRAP  -->
 
@@ -58,7 +61,13 @@
             <th scope="col">Bikes/Slots</th>
             <th scope="col">Status</th>
             <th scope="col">Nearby</th>
-            <th scope="col">  </th>
+            <th scope="col">
+							<label for="favourites" class="custom-checkbox labelCheck" title="Show favorites">
+								<input class="custom-control-input" type="checkbox" id="favourites"/>
+								<i class="far fa-star"></i>
+								<i class="fas fa-star"></i>
+							</label>
+					  </th>
           </tr>
         </thead>
         <tbody>

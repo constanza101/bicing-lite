@@ -48,18 +48,18 @@ function showList(){
                   '" class="custom-checkbox labelCheck"><input type="checkbox" id="checkbox'+id+
                   '"/><i class="far fa-star"></i><i class="fas fa-star"></i></label>';
 
-                  var nearBtn = '<a class="nearBtn" nearbyStations="'+nearbyStations+
-                  '"><i class="far fa-star"></i></a>';
+                  var nearBtn = '<a class="nearBtn" title="find nearby stations" nearbyStations="'+nearbyStations+
+                  '">+ <i class="fas fa-bicycle"></i></a>';
 
                 // var nearby = <i class="fas fa-chevron-circle-down"></i>
 
   //si no existe, agregamos la estación a la lista (append)
                   $("tbody").append(
                     '<tr class="trow" id="tr_'+id+'" nearbyStations="'+nearbyStations+'"><th scope="row">' + id +
-                    '</th><td><a target="_blank" href="'
+                    '</th><td><a class="address" target="_blank" href="'
                      + my_url + '">' + streetName + ', ' + streetNumber +
                      '</a></td><td><span id=' + id + '>' + bikes + '</span>/'
-                     + slots + '</td><td>' + status + '</td><td>' + nearBtn
+                     + slots + '</td><td>' + status + '</td><td id=bikeIcon>' + nearBtn
                       + '</td><td>' + star + '</td></tr>');
 
 
@@ -226,22 +226,19 @@ function addNearbyStations(objetoOrigen) {
         var nearbyStations = station.nearbyStations; //<--string de numeros
 
         var my_url = 'https://www.google.es/maps/place/' + streetName.replace(" ", "+") + '+' + streetNumber;
-
         var star =   '<label stationId="'+id+'" for="checkbox'+id+
         '" class="custom-checkbox labelCheck"><input type="checkbox" id="checkbox'+id+
         '"/><i class="far fa-star"></i><i class="fas fa-star"></i></label>';
-
-        var nearBtn = '<a class="nearBtn" nearbyStations="'+nearbyStations+
-        '"><i class="far fa-star"></i></a>';
-
+        var nearBtn = '<a class="nearBtn " nearbyStations="'+nearbyStations+
+        '"> + <i class="fas fa-bicycle"></i></a>';
 
 
-        $(objetoOrigen).after('<tr class="trow table-dark nearbyRow" id="tr_'+id+'" nearbyStations="'+nearbyStations+'"><th scope="row">' + id +
+
+        $(objetoOrigen).after('<tr class="trow table-danger nearbyRow" id="tr_'+id+'" nearbyStations="'+nearbyStations+'"><th scope="row">' + id +
             '</th><td><a target="_blank" href="' + my_url + '">' + streetName + ', ' + streetNumber + '</a></td><td><span id='
-            + id + '>' + bikes + '</span>/' + slots + '</td><td>' + status + '</td><td>' + nearBtn
-            + '</td><td>' + star + '</td></tr>');
+            + id + '>' + bikes + '</span>/' + slots + '</td><td>' + status + '</td><td>  </td><td>' + star + '</td></tr>');
 
-            
+
     }
 }
 

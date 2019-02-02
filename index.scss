@@ -1,5 +1,14 @@
 $primary-color: #e3001b;
 
+table {
+  text-align: center;
+}
+
+.address {
+  text-align: left;
+}
+
+
 header{
   height: 77px;
   background-image: url(images/bicing6.png);
@@ -16,6 +25,7 @@ header{
 
 a{
   color: $primary-color !important;
+
 }
 
 .btn{
@@ -23,15 +33,31 @@ a{
   margin-bottom: 30px;
 }
 
+.nearBtn{
+  cursor: pointer;
+  border: 1px solid $primary-color;
+  padding: 1px 10px;
+  border-radius: 3px;
+}
+
 td label input[type="checkbox"] {
   display: none;
 }
 
+.favBtn{
+  text-align: left;
+  padding-left: 0px;
+}
+
+
+// CHECKBOX
 .custom-checkbox {
   margin-left: 2em;
   position: relative;
   cursor: pointer;
 }
+
+//ESTRELLAS:
 
 .custom-checkbox .fa-star {
   color: gold;
